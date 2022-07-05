@@ -1,4 +1,4 @@
-from cryptography.fernet import Fernet
+zfrom cryptography.fernet import Fernet
 
 key = " "
 

